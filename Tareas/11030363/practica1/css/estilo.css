@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Jolly Lodger';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Jolly Lodger'), local('JollyLodger'), url(./css/font/RX8HnkBgaEKQSHQyP9itiXhCUOGz7vYGh680lGh-uXM.woff);
+}
+
+
+@font-face {
+  font-family: 'Mystery Quest';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Mystery Quest'), local('MysteryQuest'), url(./css/font/467jJvg0c7HgucvBB9PLDxEVhAA1gnTRu3Am0EzDRlM.woff);
+}
+
+
+body{
+	font-size:12px Helvetica;
+	
+}/*comentarios*/
+
+.container{
+	
+}
+
+
+
+h1 {
+font-family: 'Jolly Lodger', cursive;
+}
+
+h2{
+font-family: 'Mystery Quest', cursive;
+}
+
+p{
+font-family: 'Lily Script One', cursive;
+}
+
+h3{
+font-family: 'Allura', cursive;
+}
+
+
+body{
+	font: 16px/26px helvetica;
+	line-height: 1.4;
+}/*body*/
+
+.container{
+	width:90%;
+	margin: 0 5%;
+}
+
+.header-container{
+	border: 20px;
+	border-top: 20px;
+	border-left: 20px;
+	border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside{
+	border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside{
+	background: #f16529;
+}
+
+.title{
+		color: white;
+}
+
+
+/**=================
+====================
+                    **/
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav a{
+	display: block;
+	margin-bottom: 10px;
+	padding: 15px 0;
+	
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	
+	color: white;
+	background: #e44d26;
+}
+
+nav a:hover, /*cuando pase el cursor por ensima*/
+nav a:visited {
+	color: white;
+}
+
+nav a:hover{
+	text-decoration: underline;
+}
+
+	
+	
+.main{
+	padding: 30px 0; /*margen interior que tiene un elemento*/
+}
+
+.main article h1{
+	font-size: 2em;
+}
+
+.main aside{
+	color: white;
+	padding: 20px 0;
+}
+
+.clear:before,
+.clear:after{
+	content: " ";
+	display: table;
+}
+
+.clear:after{
+	clear: both;
+}
+	
+	/*	border.- el borde del elemento
+		padding.- el margen inferior del elemento
+		margin.- el margen de afuera de un elemento
+	*/
+	
+	
+
+	
+	
+@media only screen and (min-width: 480px){
+	/*Esto se aplica a pantallas más anchas de 480 480 pixeles*/
+	
+	h1{color:red;}
+	nav a {
+		float: left;
+		width: 27%;
+		margin: 0 1.7%;
+		padding: 25px 2%;
+		margin-bottom: 0;
+	}
+	
+	nav li:first-child a {
+		margin-left: 0;
+	}
+	
+	nav li:Last-child a {
+		margin-right: 0;
+	}
+	
+	nav ul li {
+		display:inline;
+	}
+	
+	.oldie nav a {
+		margin: 0 0.7%;
+	}
+}
