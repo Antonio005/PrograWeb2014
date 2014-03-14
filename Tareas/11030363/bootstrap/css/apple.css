@@ -1,0 +1,86 @@
+#primer{ 
+	position: static;
+	background-image: url("./../img/principal.jpg");
+	width:100%; 
+	height:100%;
+	padding:0%;
+}
+
+
+#uno{
+	
+	background-image: url("./../img/uno1.jpg");
+}
+
+
+#dos{ 
+	position:static; 
+	background-image: url("./../img/dos2.jpg");
+	width:100%; 
+	height:100%;
+	padding-top:0%;
+	top:0px;
+	left:0px;
+}
+
+
+#tres{
+	position:static;  
+	background-image: url("./../img/tres3.jpg");
+	width:100%; 
+	height:100%;
+	padding-top:0%;
+	top:0px;
+	left:0px;
+}
+
+
+#cuatro{
+	position:static;  
+	background-image: url("./../img/cuatro.jpg");
+	width:100%; 
+	height:100%;
+	padding-top:0%;
+	top:0px;
+	left:0px;
+	
+}
+
+*/
+#ultimo{
+	position:static;  	
+	width:100%; 
+	height:100%;
+	padding-top:0%;
+	top:0px;
+	left:0px;
+}
+#barra{
+	position:absolute;
+	top:5%;
+	width:72%; 
+	left:10%;
+}
+
+#contenido{
+	position:absolute;
+	top:25%; 
+	left:20%;
+	color:white;
+}
+
+#pie{
+	position:relative;
+	top:0%;
+	width:80%; 
+	height:100%;
+	left:20%;
+}
+
+h6{
+	font-size:9px;
+}
+
+#hiper{
+	color:white;
+}
