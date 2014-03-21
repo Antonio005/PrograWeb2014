@@ -1,0 +1,24 @@
+
+#img{
+	background-image: url("./../img/hoyo2.png");
+	width: 200px;
+	height: 370px;
+	margin:0px;
+	z-index:1;
+}
+
+#caracol{
+	position:absolute;
+	height: 100px;
+	top:300px;
+}
+/*
+#ocultar{
+	padding-top:0px;
+	padding-left:0px;
+	margin:0px;
+}*/
+
+label {
+	color:red;
+}
