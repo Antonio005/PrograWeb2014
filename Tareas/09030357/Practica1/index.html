@@ -30,11 +30,34 @@
 					</header>
 					<section>
 						<h2>Subtitulo de la noticia</h2>
-						<p>contenido d ela noticia</p>
+						<p>contenido de la noticia</p>
 					</section>
 					<section>
 						<h2>Subtitulo de la noticia</h2>
-						<p>contenido d ela noticia</p>
+						
+						<form action="index.html" method="GET"><!--action recibe una url, en nethod decimos porque metodo enviaremos la información los metodos son get y post-->
+						
+							<label for="dato1">selecciona:</label>
+							<select name="dato1" id="dato1">
+								<option value="op1">opcion 1</option>
+								<option value="op2">opcion 2</option>
+								<option value="op3">opcion 3</option>
+							</select>
+							<hr>
+							<label for="dato2"></label>
+							<br>
+							<textarea name="dato2" rows="4" cols="50" id="dato2">
+							</textarea>
+							<hr>
+							<label for="dato3">nombre</label><br>
+							<input type="text" 
+									name="dato3" 
+									id="dato3" required>
+							<hr>
+							<input type="submit" value="Enviar">
+						</form>
+						
+						<p>contenido de la noticia</p>
 					</section>		
 					<footer>
 						<h3>fin del articulo</h3>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<title>test</title> 
+<style> 
+*{margin:0} 
+body{ background-color:#000; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:9px} 
+#cuadro{width:50px; height:50px; background-color:#F00; position:absolute; text-align:center; line-height:50px; color:white; margin-top:85px; cursor:pointer} 
+</style> 
+<script> 
+var p=0.01,t; 
+function mover(obj){ 
+if(p>350){ 
+clearTimeout(t); 
+return; 
+} 
+p+=5; 
+obj.style.left=p+'px'; 
+t=setTimeout( function(){ mover(obj) },30 ); } 
+</script>   
+</head> 
+<body> 
+<div id="cuadro" onclick="mover(this)">click</div> 
+</body> 
+</html>
