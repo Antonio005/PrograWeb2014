@@ -1,13 +1,13 @@
 <?php   
-       error_reporting(E_ALL ^ E_NOTICE);  
+       error_reporting(E_ALL ^ E_NOTICE );  
       
       include ('../../libs/adodb5/adodb-pager.inc.php');
       include ('../../libs/adodb5/adodb.inc.php');    
-      include ('../../libs/ER.php'); 
+     
       include ('../../models/Conexion.php');
       include ('../../models/Modelo.php');      
       include ('../../models/Usuario.php');
-                    
+      include ('../../libs/ER.php');       
 
 ?>
  
@@ -25,11 +25,11 @@
 
      if(empty($errores)){
 
-      $usuario->inserta($usuario->get_atributos());      
-      session_destroy();
-      #echo "cero";
-      header('location:usuario.php');
-
+      $usuario->inserta($usuario->get_atributos());  
+     # $_SESSION['exito']="Usuario Registrado";        
+      session_destroy();  
+      
+      header('location: ../site/inicio.php');
     }
 
     

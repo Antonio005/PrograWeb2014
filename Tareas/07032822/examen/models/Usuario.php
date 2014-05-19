@@ -1,4 +1,7 @@
 <?php
+session_start();
+$email=0;
+$username=0;
 
 class Usuario extends Modelo{
     public $nombre_tabla = 'usuario_tb';
@@ -45,33 +48,33 @@ class Usuario extends Modelo{
         }
         return $rs;
     }
-   /* public function set_email($valor){
+   public function set_email($valor){
         $this->email = trim($valor);
-    }*/
+    }
     
     public function get_email(){
         return $this->email;
     } 
     
 
-     public function set_email($valor){
+     /* public function set_email($valor){
         
-        
-        
+        $valor=trim($valor);        
         $rs = $this->consulta_sql("select * from usuario_tb where email = '$valor'");
         $rows = $rs->GetArray();        
 
         if(count($rows) > 0){           
-           
-            $_SESSION["email"]="Este e-mail (".$valor.") ya esta registrado";
+            $_SESSION['err1']="1";
+            #$_SESSION["email"]="Este e-mail (".$valor.") ya esta registrado";            
             $this->email = $valor;     
             #$this->email ="";            
 
         }else{
+            $email=0;            
             $this->email = $valor;            
         }
         
-    }
+    }*/
 
     
 
@@ -79,9 +82,11 @@ class Usuario extends Modelo{
         return $this->username;
     } 
     
-    /*public function set_username($valor){
+    public function set_username($valor){
         $this->username = trim($valor);
-    }*/
+    }
+
+    /*
     public function set_username($valor){
         
         $valor=trim($valor);
@@ -100,7 +105,7 @@ class Usuario extends Modelo{
            
         }
         
-    }
+    }*/
 
     
     public function get_password(){

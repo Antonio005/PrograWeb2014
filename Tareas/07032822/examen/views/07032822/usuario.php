@@ -30,14 +30,13 @@
 		<div class="panel panel-primary">
 		  <div class="panel-heading">Usuarios</div>
 
-		 <!-- <div class="alert alert-primary alert-dismissable">
-  			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-  			<strong>Mensajes!</strong>		    
-				  
-			</div>
-		  <div class="panel-body">
+		 <div class="alert alert-primary alert-dismissable">
+	  			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	  			<strong>Mensajes!</strong><?php # if(isset($_SESSION['exito'])){echo $_SESSION['exito']; session_destroy();}else{echo "" ;} unset($_SESSION['exito']);?>
+  		     </div>
+		  <!--<div class="panel-body">
 		    <button type="button" class="btn btn-primary btn-large" id="btnuser" >Registar</button>
-		  </div>--> 
+		  </div> --> 
 		</div>	
 		
 	</div>
@@ -52,13 +51,13 @@
 				    
 				    <div class="col-sm-10">
 				      <label for="inputEmail3" class=" control-label">E-mail</label>
-				      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" >
+				      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required >
 				   	 </div>
 				  </div>
 				  <div class="form-group">				    
 				    <div class="col-sm-10">
 				      <label for="inputPassword3" class=" control-label">Contraseña</label>
-				      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required>
 				    </div>
 				  </div>
 				  <div class="form-group">				    
@@ -79,24 +78,24 @@
 	</div>
 	
 
-	<div class="col-md-8">
-		<div class="panel panel-info ">
+	<div class="col-md-8" >
+		<div class="panel panel-info " id="regis">
 		  <div class="panel-heading">Registro de Usuario</div>
 		  <div class="panel-body" id="info">	    
 
 
 			<form class="form-horizontal" action="tabla_usuario.php" method="post">
-				<fieldset>
+		
 
 				<!-- Form Name -->
 				<legend>Usuario</legend>
-				<legend><p><h6>Campos con * son obligatorios</h6></p></legend>
+				<p><h6>Campos con * son obligatorios</h6></p>
 
 				<!-- Text input-->
 				<div class="control-group ">
 				  <label class="control-label" for="email"><span class="glyphicon glyphicon-envelope"></span>E-mail *</label>
 				  <div class="controls">
-				    <input id="email" name="email" type="text" placeholder="email" class="form-control" requerid="" value=<?php if(isset($_SESSION['email'])){echo $imprimir['email'];}else{echo $imprimir['email'] ;}?>>	
+				    <input id="email" name="email" type="text" placeholder="Ejemplo de e-mail: usuario@email.com" class="form-control" requerid="" value=<?php if(isset($_SESSION['email'])){echo $imprimir['email'];}else{echo $imprimir['email'] ;}?>>	
 				    <p class="bg-danger"><?php if(isset($_SESSION['email'])){echo $_SESSION['email'];}else{echo "" ;} unset($_SESSION['email']);?></p>				    
 				  </div>
 				</div>
@@ -105,8 +104,7 @@
 				<div class="control-group">
 				  <label class="control-label" for="username"><span class="glyphicon glyphicon-user"></span>Usuario *</label>
 				  <div class="controls">
-				    <input id="username" name="username" type="text" placeholder="username" class="form-control"  value=<?php echo $imprimir['username'];?>>
-				     
+				    <input id="username" name="username" type="text" placeholder="Ejemplo de usuario : usuario_123" class="form-control"  value="<?php echo $imprimir['username'];?>" requerid>				     
 				    <p class="bg-danger"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];}else{echo "" ;} unset($_SESSION['username']);?></p>				   
 				  </div>
 				</div>
@@ -115,7 +113,8 @@
 				<div class="control-group">
 				  <label class="control-label" for="password">Contraseña *</label>
 				  <div class="controls">
-				    <input id="password" name="password" type="password" placeholder="password" class="form-control"  >				    
+				    <input id="password" name="password" type="password" placeholder="password" class="form-control"  value="<?php echo $imprimir['password'];?>"  requerid >		
+				    <p class="bg-danger"><?php if(isset($_SESSION['password'])){echo $_SESSION['password'];}else{echo "" ;} unset($_SESSION['password']);?></p>				   		    
 				  </div>
 				</div>
 
@@ -129,24 +128,26 @@
 				  </div>
 				</div>
 
+					<!-- Text input-->
+				<div class="control-group">
+				  <label class="control-label" for="cp">C.P</label>
+				  <div class="controls">
+				    <input id="cp" name="cp" type="text" placeholder="Ejemplo de C.P.: 38020" class="form-control" value="<?php echo $imprimir['cp'];?>" requerid>				
+				    <p class="bg-danger"><?php if(isset($_SESSION['cp'])){echo $_SESSION['cp'];}else{echo "" ;} unset($_SESSION['cp']);?></p>	    
+				  </div>
+				</div>
+
 				<!-- Text input-->
 				<div class="control-group">
 				  <label class="control-label" for="rfc">R.F.C</label>
 				  <div class="controls">
-				    <input id="rfc" name="rfc" type="text" placeholder="rfc" class="form-control" >
-				    
+				    <input id="rfc" name="rfc" type="text" placeholder="Ejemplo de R.F.C. : VIMA870510BFA" class="form-control" value="<?php echo $imprimir['rfc'];?>" requerid >
+				    <p class="bg-danger"><?php if(isset($_SESSION['rfc'])){echo $_SESSION['rfc'];}else{echo "" ;} unset($_SESSION['rfc']);?></p>				   
+				  </div>
 				  </div>
 				</div>
 
-				<!-- Text input-->
-				<div class="control-group">
-				  <label class="control-label" for="C.P.">C.P</label>
-				  <div class="controls">
-				    <input id="cp" name="cp" type="number" placeholder="cp" class="form-control">
-				    
-				  </div>
-				</div>
-
+				
 				<div class="control-group">
                     <label class="control-label" for="singlebutton"></label>
                     <div class="controls">                     
@@ -155,7 +156,7 @@
                  </div>
 
 
-				</fieldset>
+			
 			</form>
 
 
